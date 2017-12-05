@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>GOOGLE MAP</title>
+		<meta charset="utf-8" />
+		<style>
+	      /* Always set the map height explicitly to define the size of the div
+	       * element that contains the map. */
+	      #map {
+	        height: 100%;
+	      }
+	      /* Optional: Makes the sample page fill the window. */
+	      html, body {
+	        height: 100%;
+	        margin: 0;
+	        padding: 0;
+	      }
+	    </style>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		
+        <!--<link href="C:/Users/caps9/Desktop/html5up-helios/assets/css/bootstrap.css" rel="stylesheet">-->
+		<!--link rel="stylesheet" href="assets/css/main.css" />
+		<link href="https://fonts.googleapis.com/css?family=Voltaire" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		
+        <!--link href="https://fonts.googleapis.com/css?family=Anton|Permanent+Marker" rel="stylesheet"-->
+        <!--  map  -->
+      
+    </head>
+
+    <body>
+	    <script>
+	      var map;
+	    
+	      function initMap() {
+	        map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 16,
+	          center: new google.maps.LatLng(24.179000,120.642485),
+	          /*var myLatlng = new google.maps.LatLng(<?php echo $Latitude[0]; ?>,<?php echo $Longitude[0]; ?>);*/
+	          /*center: new google.maps.LatLng(24.179568 , 120.644438),*/
+	          mapTypeId: 'roadmap'
+	        });
+	        
+	      
+	        var icons = {
+	          gas: {
+	            icon: 'images/gas.png'
+	          },
+	          email: {
+	            /*icon: dot_center + 'red-dot.png'*/
+	            icon: 'images/email.png'
+	          }
+	        };
+	        var features = [
+	          {
+	            position: new google.maps.LatLng(24.171188, 120.6311989),
+	            type: 'gas'
+	          }, 
+	          {
+	            position: new google.maps.LatLng(24.1713234, 120.6417413),
+	            type: 'gas'
+	          }, 
+	          {
+	            position: new google.maps.LatLng(24.1635083, 120.6482792),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.171223, 120.6293373),
+	            type: 'gas'
+	          }, 
+	          {
+	            position: new google.maps.LatLng(24.166172, 120.6167743),
+	            type: 'gas'
+	          }, 
+	          {
+	            position: new google.maps.LatLng(24.1721424, 120.6432125),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.182369, 120.6314393),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.201513, 120.6526283),
+	            type: 'gas'
+	          }, 
+	          {
+	            position: new google.maps.LatLng(24.1782459, 120.6183106),
+	            type: 'gas'
+	          }, 
+	          {
+	            position: new google.maps.LatLng(24.1796619, 120.6169046),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.1659893, 120.6163702),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1763329, 120.6503903),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1738445,120.6578081),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1983873, 120.6403902),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.2081756, 120.6488371),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.192622, 120.6209773),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.174953,120.6021312),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.171489,120.6576353),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.1628253,120.6262056),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.1874209,120.616208),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.207987,120.6490288),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.183941, 120.6275824),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.180119, 120.6303033),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.1662837, 120.642932),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.179254, 120.6321703),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.201445, 120.6610073),
+	            type: 'gas'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.1618038, 120.6483075),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.2012093, 120.6077827),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.2007819, 120.6547873),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1951644, 120.6420678),
+	            type: 'gas'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1824159, 120.6005393),
+	            type: 'email' 
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1618038,120.6483075),
+	            type: 'email'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.175272, 120.6469453),
+	            type: 'email'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1766902, 120.635454),
+	            type: 'email'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1646942, 120.6520514),
+	            type: 'email'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1699279, 120.6042656),
+	            type: 'email'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1837584, 120.6015179),
+	            type: 'email'
+	          },
+	          {
+	            position: new google.maps.LatLng(24.1906027, 120.6101588),
+	            type: 'email'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.1564627, 120.6507718),
+	            type: 'email'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.1834782, 120.6163698),
+	            type: 'email'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.1665835, 120.6409554),
+	            type: 'email'
+	          },
+	           {
+	            position: new google.maps.LatLng(24.2085787, 120.6118922),
+	            type: 'email'
+	          },
+
+
+	        ];
+
+	       	var geocoder = new google.maps.Geocoder();
+	       	
+	        var infowindow = new google.maps.InfoWindow();
+
+	        features.forEach(function(feature) {
+	            var marker = new google.maps.Marker({
+		            position: feature.position,
+		            icon: icons[feature.type].icon,
+		            map: map
+	            });
+		        marker.addListener('mouseover', function() {
+
+					map.setCenter(marker.getPosition());
+					var markerPosition = marker.getPosition();
+					/*經緯度轉地址API*/
+					geocoder.geocode({'location': markerPosition}, function(results, status) {
+					    if (status === 'OK') {
+					    	if (results[1]) {
+						        infowindow.setContent('<div><strong>' + results[1].formatted_address + '</div>');
+						        infowindow.open(map, marker);
+					    	} 
+					    	else 
+					    	{
+					        	window.alert('No results found');
+					        }
+					    }   else 
+					    	{
+					        	window.alert('Geocoder failed due to: ' + status);
+					    	}
+				    });
+				}); 
+	        });
+
+	      }
+	    </script>
+	    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQhNukU-sEshEijjJClTz6o-53RFLvSsM&callback=initMap"   type="text/javascript"></script>
+    	
+    	<div id="map"></div>
+    
+    	
+			
+	
+	</body>	
+			
+</html>
